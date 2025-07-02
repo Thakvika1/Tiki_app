@@ -1,3 +1,4 @@
+<link rel="stylesheet" href="../style/login.css">
 
 <?php 
     include "../conn_db.php";

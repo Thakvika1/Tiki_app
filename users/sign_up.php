@@ -1,3 +1,4 @@
+<link rel="stylesheet" href="../style/sign_up.css">
 
 <?php 
     include "../conn_db.php";
