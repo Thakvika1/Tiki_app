@@ -4,7 +4,6 @@
 
     include "../conn_db.php";
 
-    $conn = mysqli_connect($host, $user, $password, $database);
 
     // Check connection
     if (!$conn) {
