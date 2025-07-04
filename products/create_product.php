@@ -1,3 +1,4 @@
+
 <link rel="stylesheet" href="../style/dashboard.css">
 
 <?php
@@ -12,6 +13,3 @@
     echo "Connected successfully! <br /><br />";
 
 ?>
-
-<a href="../app.php">Home</a>
-<a href="../products/create_product.php">Create</a>
