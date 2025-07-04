@@ -10,7 +10,7 @@
     }
     echo "Connected successfully! <br /><br />";
 
-    include "../products/product_card.php";
+    include "./products/product_card.php";
 
     // call component product card 
     // productCard("Sneakers", "29.99", "img/shoes.jpg");
