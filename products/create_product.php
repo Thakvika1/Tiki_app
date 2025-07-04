@@ -1,5 +1,4 @@
 
-<link rel="stylesheet" href="../style/create_product.css">
 
 <?php
     include "../conn_db.php";
@@ -34,6 +33,7 @@
 ?>
 
 
+<link rel="stylesheet" href="../style/create_product.css">
 
 <form action="" method="post" enctype="multipart/form-data">
     <input id="image" type="file" name="image" accept="image/*" required>
@@ -41,23 +41,23 @@
     <input type="text" name="price" required>
     <button type="submit">Create Product</button>
 </form>
-<img src="" id="myImg" alt="">
+
+<!-- show image  -->
+<img src="" id="myImg" alt="Preview">
 
 
 
 <script>
     const imageInput = document.getElementById('image');
+    const preview = document.getElementById('myImg');
 
-    imageInput.addEventListener('change', function() {
+    imageInput.addEventListener('change', function () {
+        const file = this.files[0];
 
-    const files = this.files;
-    
-    document.getElementById('myImg').src = URL.createObjectURL(files[0]);
-    document.getElementById('myImg').style.width = '200px';
-    document.getElementById('myImg').style.height = '200px';
-    document.getElementById('myImg').style.objectFit = 'cover';
-    document.getElementById('myImg').style.borderRadius = '10px';
-    document.getElementById('myImg').style.marginTop = '10px';
-    document.getElementById('myImg').style.display = 'block';
+        if (file) {
+            preview.src = URL.createObjectURL(file);
+            preview.classList.add('show'); 
+        }
     });
 </script>
+

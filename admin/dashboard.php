@@ -1,4 +1,3 @@
-<link rel="stylesheet" href="../style/dashboard.css">
 
 <?php
 
@@ -12,6 +11,10 @@
     echo "Connected successfully! <br /><br />";
 
 ?>
+
+
+<link rel="stylesheet" href="../style/dashboard.css">
+
 
 
 <a href="../app.php">Home</a>
