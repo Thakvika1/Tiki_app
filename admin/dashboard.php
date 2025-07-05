@@ -13,10 +13,12 @@
     }
     echo "Connected successfully! <br /><br />";
 
-    $product_db = "SELECT * FROM products";
-    $result = mysqli_query($conn, $product_db);
 
-    if ($result && mysqli_num_rows($result) > 0) {
+    // products data
+    $product_db = "SELECT * FROM products";
+    $query_product_db = mysqli_query($conn, $product_db);
+
+    if ($query_product_db && mysqli_num_rows($query_product_db) > 0) {
         echo '
             <table border="2">
                 <thead>
@@ -30,13 +32,13 @@
                 <tbody>
         ';
 
-        while ($row = mysqli_fetch_assoc($result)) {
+        while ($row_product_db = mysqli_fetch_assoc($query_product_db)) {
             echo '
                 <tr id="values">
-                    <td>' . $row['product_id'] . '</td>
-                    <td>' . $row['title'] . '</td>
-                    <td>' . $row['price'] . '</td>
-                    <td>' . $row['created_at'] . '</td>
+                    <td>' . $row_product_db['product_id'] . '</td>
+                    <td>' . $row_product_db['title'] . '</td>
+                    <td>' . $row_product_db['price'] . '</td>
+                    <td>' . $row_product_db['created_at'] . '</td>
                 </tr>
             ';
         }
@@ -45,6 +47,29 @@
                 </table>
                 <br /><br />
         ';
+    }
+
+    // orders data
+    $order_db = "SELECT * FROM orders";
+    $query_order_db = mysqli_query($conn, $order_db);
+
+    if($query_order_db && mysqli_num_rows($query_order_db) > 0) {
+        echo '
+            <table border="2">
+                <thead>
+                    <tr>
+                        <th>Product ID</th>
+                        <th>Title</th>
+                        <th>Price</th>
+                        <th>Create at</th>
+                    </tr>
+                </thead>
+                <tbody>
+        ';
+
+        while ($row_order_db = mysqli_fetch_assoc($query_product_db)) {
+
+        }
     }
 
 ?>

@@ -9,13 +9,17 @@
 
 
     $product_db = "SELECT * FROM products";
-    $result = mysqli_query($conn, $product_db);
+    $query_product_db = mysqli_query($conn, $product_db);
 
-    if ($result && mysqli_num_rows($result) > 0) {
+    if ($query_product_db && mysqli_num_rows($query_product_db) > 0) {
 
         echo "<div class='product-container'> ";
-            while ($row = mysqli_fetch_assoc($result)) {
-                echo productCard($row['title'], $row['price'], $row['image_url']);
+            while ($row_product_db = mysqli_fetch_assoc($query_product_db)) {
+                echo productCard(
+                        $row_product_db['title'],
+                        $row_product_db['price'],
+                        $row_product_db['image_url']
+                    );
 
             }
         echo "</div>";
