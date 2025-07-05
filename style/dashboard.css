@@ -33,7 +33,7 @@ tr:nth-child(even) {
     background-color: #f2f2f2;
 }
 
-#values:hover {
+.values:hover {
     background-color: #e6f7ff;
 }
 
