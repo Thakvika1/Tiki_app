@@ -3,8 +3,11 @@
 
 
 <?php
+
+    // connect to database 
     include "./conn_db.php";
 
+    // component product card
     include "./products/product_card.php";
 
 
@@ -20,7 +23,6 @@
                         $row_product_db['price'],
                         $row_product_db['image_url']
                     );
-
             }
         echo "</div>";
     }
