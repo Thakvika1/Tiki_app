@@ -19,7 +19,7 @@
         if (move_uploaded_file($imageTmp, $uploadPath)) {
 
             // Store relative path for DB
-            $imageUrl = "../uploads/" . $uniqueName;
+            $imageUrl = "./uploads/" . $uniqueName;
 
             // Insert into DB
             $create_product = "INSERT INTO products(image_url, title, price)
@@ -33,7 +33,7 @@
 ?>
 
 
-<link rel="stylesheet" href="../style/create_product.css">
+<link rel="stylesheet" href="../style/create_product.css?v=1">
 
 <form action="" method="post" enctype="multipart/form-data">
     <input id="image" type="file" name="image" accept="image/*" required>

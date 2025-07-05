@@ -1,21 +1,27 @@
-<link rel="stylesheet" href="./style/app.css">
+<link rel="stylesheet" href="./style/app.css?v=1">
+
 
 
 <?php
     include "./conn_db.php";
 
-    // Check connection
-    if (!$conn) {
-        die("Connection failed: " . mysqli_connect_error());
-    }
-    echo "Connected successfully! <br /><br />";
-
     include "./products/product_card.php";
 
-    // call component product card 
-    // productCard("Sneakers", "29.99", "img/shoes.jpg");
 
-    
+    $product_db = "SELECT * FROM products";
+    $result = mysqli_query($conn, $product_db);
+
+    if ($result && mysqli_num_rows($result) > 0) {
+
+        echo "<div class='product-container'> ";
+            while ($row = mysqli_fetch_assoc($result)) {
+                echo productCard($row['title'], $row['price'], $row['image_url']);
+
+            }
+        echo "</div>";
+    }
+
 
 ?>
+
 

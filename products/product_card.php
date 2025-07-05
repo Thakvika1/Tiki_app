@@ -1,17 +1,15 @@
 
 
-<link rel="stylesheet" href="../style/create_product.css">
-
 <?php
-
-function productCard($title, $price, $image) {
-    echo "
-    <div class='product'>
-        <img src='$image' />
-        <h3>$title</h3>
-        <p>$$price</p>
-    </div>";
-}
-
+    function productCard($title, $price, $image) {
+        echo "
+            <div class='product'>
+                <img id='image' src='$image' />
+                <h3>$title</h3>
+                <p>$$price</p>
+            </div>
+        ";
+    }
 
 ?>
+
