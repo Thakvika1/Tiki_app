@@ -24,6 +24,8 @@ if($_SERVER["REQUEST_METHOD"] === "POST") {
 ?>
 
 
+<link rel="stylesheet" href="../style/confirm_order.css?v=1">
+
 <form method="post">
     <input type="hidden" value="<?= $product_id ?>">
     <input type="text" name="username" required>
