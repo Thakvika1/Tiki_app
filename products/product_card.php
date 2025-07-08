@@ -7,7 +7,7 @@
                 <img id='image' src='$image' />
                 <h3>$title</h3>
                 <p>$$price</p>
-                <form method='get'>
+                <form method='post' action='./orders/confirm_order.php'>
                     <input name='product_id' value='$product_id' type='hidden' />
                     <input name='title' value='$title' type='hidden' />
                     <input name='price' value='$price' type='hidden' />

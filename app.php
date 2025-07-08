@@ -9,13 +9,17 @@
     // component product card
     include "./products/product_card.php";
 
-    //button buy now
-    if ($_SERVER['REQUEST_METHOD'] === 'GET' && isset($_GET['buy_now'])) {
-        $title = $_GET['title'];
-        $price = $_GET['price'];
-        $product_id = $_GET['product_id'];
+    $form_submit = false;
 
-        echo $title . " - $" . $price . " - ID: " . $product_id;
+    //button buy now
+    if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['buy_now'])) {
+        $title = $_POST['title'];
+        $price = $_POST['price'];
+        $product_id = $_POST['product_id'];
+
+        $form_submit = true;
+        header("Location: ./orders/confirm_order.php");
+
     }
 
 
