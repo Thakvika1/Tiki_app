@@ -9,20 +9,6 @@
     // component product card
     include "./products/product_card.php";
 
-    $form_submit = false;
-
-    //button buy now
-    if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['buy_now'])) {
-        $title = $_POST['title'];
-        $price = $_POST['price'];
-        $product_id = $_POST['product_id'];
-
-        $form_submit = true;
-        header("Location: ./orders/confirm_order.php");
-
-    }
-
-
 
     $product_db = "SELECT * FROM products";
     $query_product_db = mysqli_query($conn, $product_db);
