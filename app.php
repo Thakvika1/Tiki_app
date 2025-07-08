@@ -1,4 +1,4 @@
-<link rel="stylesheet" href="./style/app.css?v=1">
+<link rel="stylesheet" href="./style/app.css?v=2">
 
 
 <?php

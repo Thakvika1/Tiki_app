@@ -55,3 +55,37 @@
     justify-content: center;
     margin-top: 20px;
 }
+
+/* Style for buttons inside .product */
+.product button {
+    margin: 10px 5px 0;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+/* "Add To Cart" button style */
+.product button[name="add_to_card"] {
+    background-color: #3498db; /* Blue */
+    color: white;
+}
+
+.product button[name="add_to_card"]:hover {
+    background-color: #2980b9;
+    transform: translateY(-2px);
+}
+
+/* "Buy Now" button style */
+.product button[name="buy_now"] {
+    background-color: #e74c3c; /* Red */
+    color: white;
+}
+
+.product button[name="buy_now"]:hover {
+    background-color: #c0392b;
+    transform: translateY(-2px);
+}
