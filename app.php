@@ -1,7 +1,6 @@
 <link rel="stylesheet" href="./style/app.css?v=1">
 
 
-
 <?php
 
     // connect to database 
@@ -9,6 +8,16 @@
 
     // component product card
     include "./products/product_card.php";
+
+    //button buy now
+    if ($_SERVER['REQUEST_METHOD'] === 'GET' && isset($_GET['buy_now'])) {
+        $title = $_GET['title'];
+        $price = $_GET['price'];
+        $product_id = $_GET['product_id'];
+
+        echo $title . " - $" . $price . " - ID: " . $product_id;
+    }
+
 
 
     $product_db = "SELECT * FROM products";
