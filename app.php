@@ -21,7 +21,8 @@
                 echo productCard(
                         $row_product_db['title'],
                         $row_product_db['price'],
-                        $row_product_db['image_url']
+                        $row_product_db['image_url'],
+                        $row_product_db['product_id']
                     );
             }
         echo "</div>";
