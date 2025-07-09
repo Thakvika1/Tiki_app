@@ -26,7 +26,12 @@
             echo '
                 <tr class="values">';
                     foreach($table_row as $row_values) {
-                        echo '<td>' . $row_name[$row_values] . '</td>';
+                        if($row_values === 'price') {
+                            echo '<td>' . $row_name[$row_values] . '$</td>';
+                        }
+                        else {
+                            echo '<td>' . $row_name[$row_values] . '</td>';
+                        }
                     }
             echo '</tr>';
         }
