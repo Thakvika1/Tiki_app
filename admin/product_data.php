@@ -26,7 +26,7 @@
                 <tr class="values">
                     <td>' . $row_product_db['product_id'] . '</td>
                     <td>' . $row_product_db['title'] . '</td>
-                    <td>' . $row_product_db['price'] . '</td>
+                    <td>' . $row_product_db['price'] . '$</td>
                     <td>' . $row_product_db['created_at'] . '</td>
                 </tr>
             ';

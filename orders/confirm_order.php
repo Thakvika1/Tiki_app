@@ -9,6 +9,9 @@
     $price = $_POST['price'] ?? '';
     $product_id = $_POST['product_id'] ?? '';
 
+    // if($_SERVER["REQUEST_METHOD"] === "POST" && isset($_POST['buy_now'])) {
+    //     echo 'success';
+    // }
 
     if ($_SERVER["REQUEST_METHOD"] === "POST" && isset($_POST['submit_order'])) {
 
@@ -29,7 +32,7 @@
 
 <form method="post">
     <h3>Product Name : <?= $title ?> </h3>
-    <p>Price : <?= $price ?></p>
+    <p>Price : <?= $price ?>$</p>
     <input type="hidden" name='product_id' value="<?= $product_id ?>">
     <input placeholder="Name" type="text" name="username" required>
     <input placeholder="Phone number" type="text" name="phone_number" required>
