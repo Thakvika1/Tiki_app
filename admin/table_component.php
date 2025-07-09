@@ -8,7 +8,9 @@
     $get_table_data = "SELECT * FROM $table_name";
     $query_table_data = mysqli_query($connection, $get_table_data);
 
-    echo "$dashboard_name Dashboard";
+
+    echo "<h1 class='dashboard-title'>$dashboard_name Dashboard</h1>";
+    
     if ($query_table_data && mysqli_num_rows($query_table_data) > 0) {
         echo '
             <table border="2">
