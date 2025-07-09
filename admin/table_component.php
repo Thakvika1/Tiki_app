@@ -2,13 +2,13 @@
 <?php
 
 
-    function tableComponent($connection, $table_name, $table_column = [], $table_row = []) {
+    function tableComponent($connection, $table_name,$dashboard_name, $table_column = [], $table_row = []) {
 
     // orders data
     $get_table_data = "SELECT * FROM $table_name";
     $query_table_data = mysqli_query($connection, $get_table_data);
 
-
+    echo "$dashboard_name Dashboard";
     if ($query_table_data && mysqli_num_rows($query_table_data) > 0) {
         echo '
             <table border="2">
