@@ -7,12 +7,6 @@
     // connect to database 
     include "../conn_db.php";
 
-    // products data
-    // include "product_data.php";
-
-    // orders data
-    include "order_data.php";
-
     // call table component
     include "table_component.php";
 
@@ -26,12 +20,15 @@
         ['product_id', 'title', 'price', 'created_at']
     );
 
-    
+    // order table
+    echo tableComponent(
+        $conn, 
+        'orders', 
+        ['Order ID', 'Product ID', 'Customer Name', 'Customer Phone', 'Order Date'], 
+        ['order_id', 'product_id', 'customer_name', 'phone_number', 'created_at']
+    );
 
 ?>
-
-
-
 
 
 <a href="../app.php">Home</a>
