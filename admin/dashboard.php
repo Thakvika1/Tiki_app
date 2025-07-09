@@ -8,7 +8,7 @@
     include "../conn_db.php";
 
     // products data
-    include "product_data.php";
+    // include "product_data.php";
 
     // orders data
     include "order_data.php";
@@ -17,8 +17,18 @@
     include "table_component.php";
 
 
-?>
 
+    // product table
+    echo tableComponent(
+        $conn, 
+        'products', 
+        ['Product ID', 'Product Name', 'Price', 'Post Date'], 
+        ['product_id', 'title', 'price', 'created_at']
+    );
+
+    
+
+?>
 
 
 
