@@ -13,7 +13,13 @@
     // orders data
     include "order_data.php";
 
+    // call table component
+    include "table_component.php";
+
+
 ?>
+
+
 
 
 
