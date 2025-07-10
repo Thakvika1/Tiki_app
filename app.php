@@ -7,7 +7,7 @@
     include "./conn_db.php";
 
     // component product card
-    include "./components/product_card.php";
+    include "./components/ProductCardComponent.php";
 
 
     $product_db = "SELECT * FROM products";

@@ -8,7 +8,7 @@
     include "../conn_db.php";
 
     // call table component
-    include "../components/table_component.php";
+    include "../components/TableComponent.php";
 
 
 
