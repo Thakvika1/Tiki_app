@@ -23,7 +23,7 @@
                          VALUES('$product_order_id', '$customer_name', '$customer_phone_number')";
         mysqli_query($conn, $submit_order);
 
-        header("Location: ../app.php");
+        header("Location: ../App.php");
         exit;
     }
 
