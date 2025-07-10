@@ -5,7 +5,7 @@
     include "../conn_db.php";
 
     // table component
-    include "../components/TableComponent.php";
+    // include "../components/TableComponent.php";
 
     // product table
     echo tableComponent(
