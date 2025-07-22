@@ -11,11 +11,16 @@
 
 
     $product_db = "SELECT * FROM products";
+
+    // $query_product_db = $conn->query($product_db);
     $query_product_db = mysqli_query($conn, $product_db);
 
     if ($query_product_db && mysqli_num_rows($query_product_db) > 0) {
 
         echo "<div class='product-container'> ";
+        //  while ($row_product_db = $query_product_db->fetch_object()) {
+        //      $row_product_db->id
+        // }
             while ($row_product_db = mysqli_fetch_assoc($query_product_db)) {
                 echo productCard(
                         $row_product_db['title'],

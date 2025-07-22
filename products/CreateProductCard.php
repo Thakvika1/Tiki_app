@@ -38,8 +38,8 @@
 
 <form action="" method="post" enctype="multipart/form-data">
     <input id="image" type="file" name="image" accept="image/*" required>
-    <input type="text" name="title" required>
-    <input type="text" name="price" required>
+    <input type="text" name="title" placeholder="Title" required>
+    <input type="text" name="price" placeholder="Price" required>
     <button type="submit">Create Product</button>
 </form>
 
